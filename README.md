@@ -1,4 +1,4 @@
-# table_extraction
+# Table Extraction
 ## Pretrained Models  
 ## Faster RCNN  
 ## Mask RCNN
