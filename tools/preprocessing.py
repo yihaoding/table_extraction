@@ -13,8 +13,7 @@ import os
 import json
 import fitz
 
-def pyMuPDF_fitz(pdfPath, imagePath):
-    global count
+def pyMuPDF_fitz(pdfPath, imagePath,count):
     # print("imagePath=" + pdfPath)
     pdfDoc = fitz.open(pdfPath)
     for pg in range(pdfDoc.pageCount):
@@ -33,6 +32,7 @@ def pyMuPDF_fitz(pdfPath, imagePath):
 
         pix.writePNG(imagePath + '/' + 'images_%s.png' % count)
         count +=1
+        return count
 
 def coco_test_json_generator(img_path,output_path):
   img_name_list = os.listdir(path)
