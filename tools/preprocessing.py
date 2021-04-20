@@ -34,7 +34,7 @@ def pyMuPDF_fitz(pdfPath, imagePath,count):
         count +=1
     return count
 
-def coco_test_json_generator(img_path,output_path):
+def coco_test_json_generator(path,output_path):
   img_name_list = os.listdir(path)
   new_json = {}
   new_json['images'] = []
