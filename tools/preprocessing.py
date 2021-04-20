@@ -32,7 +32,7 @@ def pyMuPDF_fitz(pdfPath, imagePath,count):
 
         pix.writePNG(imagePath + '/' + 'images_%s.png' % count)
         count +=1
-        return count
+    return count
 
 def coco_test_json_generator(img_path,output_path):
   img_name_list = os.listdir(path)
