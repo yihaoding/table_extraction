@@ -34,13 +34,13 @@ def pyMuPDF_fitz(pdfPath, imagePath,count):
         count +=1
     return count
 
-def coco_test_json_generator(path,output_path):
-  img_name_list = os.listdir(path)
+def coco_test_json_generator(img_path,output_path):
+  img_name_list = os.listdir(img_path)
   new_json = {}
   new_json['images'] = []
   for i,name in enumerate(img_name_list):
     img_dict = {}
-    path = '/content/drive/MyDrive/tabel_extraction/'+name
+    path = img_path + '/' + name
     image = Image.open(path)
     img_dict['file_name'] = name
     img_dict['width'] = image.size[0]
